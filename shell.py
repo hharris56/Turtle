@@ -29,7 +29,7 @@ def main():
 	except KeyboardInterrupt:
 		pass
 
-	print("\nExiting turtle... goodbye :)")
+	print("\nExiting TURTLE... goodbye :)")
 
 # =====================================================================
 # Helper Methods
