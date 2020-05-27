@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# on startup
+cat ./assets/ascii/turtle
