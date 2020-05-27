@@ -2,10 +2,26 @@
 # May 27 2020
 # Basis Python Shell
 
+# DEV THOUGTS
+"""
+cd is not a 'command', must impliment a way to change current
+working directory
+	- will need os
+
+
+
+
+
+"""
+
+
+
+ 
 # =====================================================================
 # Imports and Global Constants
 # =====================================================================
 
+import os
 import subprocess
 
 # =====================================================================
