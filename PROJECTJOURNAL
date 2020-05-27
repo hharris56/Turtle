@@ -1,0 +1,13 @@
+Day 1 - 5/27/2020
+
+Fresh off of a semester at DVC filled with ups and downs due to the coronavirus. I am interested in starting this new project to try and create
+a personalized terminal shell that is executable and downloadable. If it is able to work well my friend and I will hopefully continue work on it. 
+
+Today we completed the basic user input and output commands as well as the skeleton for a shell function. The program
+is going to be written in python. Hunter is very good at Python so he is leading the way in that aspect. We completed the gitignore and git files as well as 
+figured out how to transfer files through git push commands. It is all going well so far with our aim to introduce some basic commands like:
+
+cd	mkdir	rm	ls	la(ls -A)	
+
+With Hunter completing work on the basic skeleton tonight, next time we resume work we will be focusing on introducing the most basic of commands to the line then moving onto how
+we are going to operate in a seperate window. 
