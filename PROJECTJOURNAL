@@ -20,3 +20,16 @@ With Hunter completing work on the basic skeleton tonight, next
 time we resume work we will be focusing on introducing the most 
 basic of commands to the line then moving onto how we are going 
 to operate in a seperate window. 
+
+Day 1 - Part 2
+
+Awesome changes made in the nuances of startup by the legendary
+programmer HHarris. He introduced the commands for listing all
+the directories and in different ways as well as set up the 
+import of the OS in python as well as the Subprocesses. These 
+will allow us to easily set up the commands for printing and 
+identifying the working directory as well as moving directories,
+but that will be a project for day 2. Long day 1, but with awesome
+progress we can see that Turtle is coming together.
+
+
