@@ -18,6 +18,7 @@ Using https://danishpraka.sh/2018/09/27/shell-in-python.html as a rough guide
 - display cwd in prompt **
 - tab autocompletion
 		- double tab to ls
+- command history
 
 
 ** Z check these out
