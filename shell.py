@@ -46,10 +46,10 @@ def startup():
 # main shell loop
 # gets user input, passes to parseInput and possibly execute
 def use():
-	#cwd = os.getcwd()
 	while True:
-		#command = input("\n{} -> ".format(cwd))
-		command = input("\nprompt -> ")
+		cwd = os.getcwd()
+		command = input("\n{} -> ".format(cwd))
+		#command = input("\nprompt -> ")
 		opt = parseInput(command)
 		# exit
 		if opt == -1:
@@ -78,6 +78,7 @@ def turtle_cd(path):
 # parses user input
 # return -1 to exit
 # return 0 to execute
+# return 1 to do nothing
 def parseInput(command):
 	# check for key phrases
 	rawin = command.lower()
@@ -85,6 +86,13 @@ def parseInput(command):
 		return -1
 	elif rawin == "help":
 		print("INSERT HELP MESSAGE HERE\n")
+
+	# split the command + look for cd
+	clist = command.split()
+	if clist[0] == "cd":
+		turtle_cd(clist[1])
+		return 1
+
 	else:
 		return 0
 
