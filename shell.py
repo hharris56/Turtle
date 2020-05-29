@@ -65,6 +65,16 @@ def execute(command):
 	except:
 		print("ERROR Command not found : {}".format(command));
 
+#AUSTIN'S GUIDED ATTEMPT AT CODING 
+#I will try to convert a path to an absolute path in order to change the directory
+def turtle_cd(path):
+	"""convert to absolute path and change directory"""
+	try:
+		os.chdir(os.path.abspath(path))
+	except Exception:
+		print("FAILED, pick another existing directory you schizophrenic dipshit".format(path))
+
+
 # parses user input
 # return -1 to exit
 # return 0 to execute
