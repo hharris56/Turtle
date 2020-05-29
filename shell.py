@@ -9,7 +9,7 @@ working directory
 	- will need os
 
 """
- 
+
 # =====================================================================
 # Imports and Global Constants
 # =====================================================================
@@ -65,7 +65,7 @@ def execute(command):
 	except:
 		print("ERROR Command not found : {}".format(command));
 
-#AUSTIN'S GUIDED ATTEMPT AT CODING 
+#AUSTIN'S GUIDED ATTEMPT AT CODING
 #I will try to convert a path to an absolute path in order to change the directory
 def turtle_cd(path):
 	"""convert to absolute path and change directory"""

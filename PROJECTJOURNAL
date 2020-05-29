@@ -32,4 +32,16 @@ identifying the working directory as well as moving directories,
 but that will be a project for day 2. Long day 1, but with awesome
 progress we can see that Turtle is coming together.
 
+Day 2 - 5/28/2020
 
+We are making good progress with the easy parts of the shell. We have 
+managed to create a CWD printing in the prompt and we were able to make 
+the CD function work well we have a bunch of new things that we 
+want to introduce as well as brainstorming what will help our 
+shell be individualized and be the preferenced shell for us. What 
+are we looking for in a shell. I am learning alot from Hunter 
+about Python and this is a really fun introduction to the 
+language. I am excited to proceed in this project and see what we 
+are able to create! Our immediate next project is working on 
+autocompleting through tabs and to work on adding more commands 
+with our parse inputs. 
