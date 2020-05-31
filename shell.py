@@ -1,6 +1,6 @@
 # Hunter Harris & Austin Shah
 # May 27 2020
-# Basis Python Shell
+# Basic Python Shell
 
 # DEV COMMENTS
 """
@@ -16,6 +16,9 @@ working directory
 
 import os
 import subprocess
+import keyboard
+import thread
+import time
 
 # =====================================================================
 # Main Method
