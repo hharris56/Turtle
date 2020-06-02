@@ -17,7 +17,7 @@ working directory
 import os
 import subprocess
 import keyboard
-import thread
+#import thread
 import time
 
 # =====================================================================
@@ -59,17 +59,16 @@ def use():
 			break
 		# execute command
 		elif opt == 0:
-			execute(command)
+			execute_command(command)
 
-# executes the given command using subprocess.run
+# executes the given command using subprocess.run (OUTDATED)
 def execute(command):
 	try:
 		subprocess.run(command.split())
 	except:
 		print("ERROR Command not found : {}".format(command));
 
-#AUSTIN'S GUIDED ATTEMPT AT CODING
-#I will try to convert a path to an absolute path in order to change the directory
+# change directory
 def turtle_cd(path):
 	"""convert to absolute path and change directory"""
 	try:
@@ -77,7 +76,7 @@ def turtle_cd(path):
 	except Exception:
 		print("FAILED, pick another existing directory you schizophrenic dipshit".format(path))
 
-#Austin's attempt at piping and using that to execute multiple commands efficiently!
+# executes the given command with support for pipes
 def execute_command(command):
 	"""execute commands and handle piping"""
 	try:
@@ -90,15 +89,16 @@ def execute_command(command):
 			#first command takes commandut from stdin
 			fdin = os.dup(s_in)
 
+			cmdlist = command.split("|")
 			#iterate over all the commands that are piped
-			for cmd in command.split("|"):
+			for cmd in cmdlist:
 				#fdin will be stdin if it's the first iteratic
 				#and the readable end of the pipe if not.
 				os.dup2(fdin, 0)
 				os.close(fdin)
 
 				#restore stdout if this is the last command
-				if cmd == command.split("|")[-1]:
+				if cmd == cmdlist[-1]:
 					fdout = os.dup(s_out)
 				else:
 					fdin, fdout = os.pipe()
@@ -110,8 +110,7 @@ def execute_command(command):
 				try:
 					subprocess.run(cmd.strip().split())
 				except Exception:
-					print("psh: command not found: 
-{}".format(cmd.strip()))
+					print("turtle: command not found: {}".format(cmd.strip()))
 
 			#restore stdout and stdin
 			os.dup2(s_in, 0)
@@ -121,7 +120,7 @@ def execute_command(command):
 		else:
 			subprocess.run(command.split(" "))
 	except Exception:
-		print("psh: command not found: {}".format(command))
+		print("turtle: command not found: {}".format(command))
 
 
 # parses user input
